@@ -11,3 +11,13 @@ userInput = 'Dillon';
 if (typeof userInput === 'string') {
     userName = userInput;
 }
+
+//NEVER TYPE
+//Never is a newer type, so it's not built into this yet. 
+//Never makes it clear that this function will never return anything.
+function generateError(message: string, code: number): never {
+    throw { message: message, errorCode: code };
+}
+
+const result = generateError('An error occurred!', 500);
+console.log(result);

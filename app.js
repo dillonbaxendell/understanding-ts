@@ -1,19 +1,15 @@
-function add(n1, n2) {
-    return n1 + n2;
+//We don't know yet what the user will eventually enter, so...
+var userInput;
+var userName;
+userInput = 5;
+userInput = 'Dillon';
+//Since unknown is less flexible than 'any' type, we can't assign userInput to userName
+//because userName needs to be a string. So we check the type of userInput before doing so.
+if (typeof userInput === 'string') {
+    userName = userInput;
 }
-//With Void as the return type, it deliberately states that this function doesn't 
-//return anything
-function printResult(num) {
-    console.log("Result: " + num);
+//NEVER TYPE
+function generateError(message, code) {
+    throw { message: message, errorCode: code };
 }
-printResult(add(5, 12));
-//CombineValues should accept any function that takes two parameters where 
-//each parameter is a number and the function returns a number
-var combineValues;
-combineValues = add;
-//Since printResult doesn't match the function type we declared above, it 
-//won't compile and it will throw an error
-//* combineValues = printResult;
-// combineValues = 5;
-console.log(combineValues(8, 8));
-// let someValue: undefined;
+generateError('An error occurred!', 500);
