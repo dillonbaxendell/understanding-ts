@@ -59,3 +59,10 @@ if (person.role === Role.AUTHOR) {
 //Enum Type:
 //enum { NEW, OLD }
 //Added by TypeScript: Automatically enumerated global constant identifiers
+
+//Any Type
+//
+//Any kind of value, no specific type assignment
+//Any takes away all of the advantages TypeScript gives you
+//Basically goes back to Vanilla JavaScript
+//Use it as a fallback
