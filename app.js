@@ -1,3 +1,4 @@
+"use strict";
 //We don't know yet what the user will eventually enter, so...
 var userInput;
 var userName;
@@ -9,7 +10,10 @@ if (typeof userInput === 'string') {
     userName = userInput;
 }
 //NEVER TYPE
+//Never is a newer type, so it's not built into this yet. 
+//Never makes it clear that this function will never return anything.
 function generateError(message, code) {
     throw { message: message, errorCode: code };
 }
-generateError('An error occurred!', 500);
+var result = generateError('An error occurred!', 500);
+console.log(result);
