@@ -1,7 +1,7 @@
 "use strict";
 //We don't know yet what the user will eventually enter, so...
-var userInput;
-var userName;
+let userInput;
+let userName;
 userInput = 5;
 userInput = 'Dillon';
 //Since unknown is less flexible than 'any' type, we can't assign userInput to userName
@@ -15,5 +15,10 @@ if (typeof userInput === 'string') {
 function generateError(message, code) {
     throw { message: message, errorCode: code };
 }
-var result = generateError('An error occurred!', 500);
+const result = generateError('An error occurred!', 500);
 console.log(result);
+//Understanding TypeScript Lib
+const button = document.querySelector('button');
+button.addEventListener('click', () => {
+    console.log('Clicked!');
+});
